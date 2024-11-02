@@ -1,0 +1,82 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "This Script was made with ♥️ EnchantedV4000", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Main = Window:MakeTab({
+	Name = "Legend Speed",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Main:AddButton({
+	Name = "Script 1",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/LegendSpeed/refs/heads/main/LegendSpeedHub"))()
+      		print("button pressed")
+  	end    
+})
+
+local Main = Window:MakeTab({
+	Name = "Hide or die",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Main:AddButton({
+	Name = "Script 1",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/Hide-or-die/refs/heads/main/Hide%20or%20die"))()
+      		print("button pressed")
+  	end    
+})
+
+local Main = Window:MakeTab({
+	Name = "Money Roll Simulator",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Main:AddButton({
+	Name = "Script 1",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/Omega/refs/heads/main/Mega"))()
+      		print("button pressed")
+  	end    
+})
+
+local Main = Window:MakeTab({
+	Name = "📣 Misc",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Main:AddButton({
+	Name = "Dont Forget To Join My Discord (CLICK THE BUTTON)",
+	Callback = function()
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+
+local function copyToClipboard(text)
+    if setclipboard then
+        setclipboard(text)
+        print("Link copied to clipboard: " .. text)
+    else
+        warn("setclipboard is not available in this environment.")
+    end
+end
+
+-- Example usage
+local link = "https://discord.gg/rhp55PyS"
+copyToClipboard(link)
+
+      		print("button pressed")
+  	end    
+})
+
+Main:AddButton({
+	Name = "Adding more soon! Stay Stuned.",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
