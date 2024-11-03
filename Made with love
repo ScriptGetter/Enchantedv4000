@@ -59,6 +59,20 @@ Main:AddButton({
 })
 
 local Main = Window:MakeTab({
+	Name = "Ninja Katana Simulator",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Main:AddButton({
+	Name = "Script 1",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/NinjaKatanaSimulator/refs/heads/main/Coolesthub"))()
+      		print("button pressed")
+  	end    
+})
+
+local Main = Window:MakeTab({
 	Name = "📣 Misc",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
