@@ -3,71 +3,82 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "This Script was made with ♥️ EnchantedV4000", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Main = Window:MakeTab({
-	Name = "Legend Speed",
+	Name = "*Credits*",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 Main:AddButton({
-	Name = "Script 1",
+	Name = "[OWNER] EnchantedV400",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+Main:AddButton({
+	Name = "Dont Forget To Join My Discord (Click The Misc To Join)",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+Main:AddButton({
+	Name = "Dont Forget To Subscribe",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+local Main = Window:MakeTab({
+	Name = "[ALPHA] Main Scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Main:AddButton({
+	Name = "Legend Of Speed",
 	Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/LegendSpeed/refs/heads/main/LegendSpeedHub"))()
       		print("button pressed")
   	end    
 })
 
-local Main = Window:MakeTab({
-	Name = "Hide or die",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
 Main:AddButton({
-	Name = "Script 1",
+	Name = "Hide Or Die",
 	Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/Hide-or-die/refs/heads/main/Hide%20or%20die"))()
       		print("button pressed")
   	end    
 })
 
-local Main = Window:MakeTab({
-	Name = "Money Roll Simulator",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
 Main:AddButton({
-	Name = "Script 1",
+	Name = "Money Roll Simulator",
 	Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/Omega/refs/heads/main/Mega"))()
       		print("button pressed")
   	end    
 })
 
-local Main = Window:MakeTab({
-	Name = "Tank Simulator [BETA]",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
 Main:AddButton({
-	Name = "Script 1",
+	Name = "Tank Simulator",
 	Callback = function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/TomatoTankSimulator/refs/heads/main/TomatoHUBtankSimulator"))()
       		print("button pressed")
   	end    
 })
 
-local Main = Window:MakeTab({
+Main:AddButton({
 	Name = "Ninja Katana Simulator",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/NinjaKatanaSimulator/refs/heads/main/Coolesthub"))()
+      		print("button pressed")
+  	end    
 })
 
 Main:AddButton({
-	Name = "Script 1",
+	Name = "Ninja Legends",
 	Callback = function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/NinjaKatanaSimulator/refs/heads/main/Coolesthub"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/NinjaLegends/refs/heads/main/NinjaLegends"))()
       		print("button pressed")
   	end    
 })
@@ -94,7 +105,7 @@ local function copyToClipboard(text)
 end
 
 -- Example usage
-local link = "https://discord.gg/rhp55PyS"
+local link = "https://discord.gg/J7uYrwCNuy"
 copyToClipboard(link)
 
       		print("button pressed")
