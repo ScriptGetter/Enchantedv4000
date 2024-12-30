@@ -83,6 +83,14 @@ Main:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Murder Vs Sheriff",
+	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/MVS-HUB-roblox/main/roblox/Cheat/roblox"))()
+      		print("button pressed")
+  	end    
+})
+
 local Main = Window:MakeTab({
 	Name = "📣 Misc",
 	Icon = "rbxassetid://4483345998",
