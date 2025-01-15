@@ -1,22 +1,22 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "This Script was made with ♥️ EnchantedV4000", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Multi Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local Main = Window:MakeTab({
-	Name = "*Credits*",
+	Name = "UPDATE",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 Main:AddButton({
-	Name = "[OWNER] EnchantedV400",
+	Name = "Added Fisch (Not Final)",
 	Callback = function()
       		print("button pressed")
   	end    
 })
 
 Main:AddButton({
-	Name = "Dont Forget To Join My Discord (Click The Misc To Join)",
+	Name = "More Soon!",
 	Callback = function()
       		print("button pressed")
   	end    
@@ -30,7 +30,7 @@ Main:AddButton({
 })
 
 local Main = Window:MakeTab({
-	Name = "[ALPHA] Main Scripts",
+	Name = "Main Scripts",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -91,38 +91,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/MVS-HUB-
   	end    
 })
 
-local Main = Window:MakeTab({
-	Name = "📣 Misc",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-Main:AddButton({
-	Name = "Dont Forget To Join My Discord (CLICK THE BUTTON)",
+Tab:AddButton({
+	Name = "Fisch",
 	Callback = function()
-local Players = game:GetService("Players")
-local player = Players.LocalPlayer
-
-local function copyToClipboard(text)
-    if setclipboard then
-        setclipboard(text)
-        print("Link copied to clipboard: " .. text)
-    else
-        warn("setclipboard is not available in this environment.")
-    end
-end
-
--- Example usage
-local link = "https://discord.gg/J7uYrwCNuy"
-copyToClipboard(link)
-
-      		print("button pressed")
-  	end    
-})
-
-Main:AddButton({
-	Name = "Adding more soon! Stay Stuned.",
-	Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ScriptGetter/FischTesting/main/Fisch.lua"))()
       		print("button pressed")
   	end    
 })
