@@ -1,0 +1,61 @@
+-- Exploding Words Chaos Script
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- Create a ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "ExplodingWordsGui"
+screenGui.Parent = playerGui
+
+-- List of random words/phrases to spam
+local words = {
+    "GAY", "LOL", "WOW", "OMG", "NOOB", "HYPE", "EPIC", "YEET", "BRUH", "FUN",
+    "POW", "BOOM", "HAHA", "BOOMBYAH", "LOBOT", "CRUSH NIMO SIYA?", "BAYOT NIGGA",
+    "NIGGA", "BITCH", "BLACK", "SWAG", "YOLO", "FLEX", "CRINGE", "LMAO", "XD"
+}
+
+-- Function to spawn a bouncing word
+local function spawnBouncingWord()
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Size = UDim2.new(0, math.random(50,150), 0, math.random(30,70))
+    textLabel.Position = UDim2.new(math.random(), 0, math.random(), 0)
+    textLabel.BackgroundTransparency = 1
+    textLabel.TextColor3 = Color3.fromRGB(math.random(0,255), math.random(0,255), math.random(0,255))
+    textLabel.Font = Enum.Font.SourceSansBold
+    textLabel.TextScaled = true
+    textLabel.Text = words[math.random(1, #words)]
+    textLabel.Parent = screenGui
+
+    -- Random movement speed
+    local dx = (math.random() * 0.02 + 0.01) * (math.random(0,1) == 0 and -1 or 1)
+    local dy = (math.random() * 0.02 + 0.01) * (math.random(0,1) == 0 and -1 or 1)
+
+    local RunService = game:GetService("RunService")
+    local connection
+    connection = RunService.RenderStepped:Connect(function()
+        local pos = textLabel.Position
+        local newX = pos.X.Scale + dx
+        local newY = pos.Y.Scale + dy
+
+        -- Bounce off screen edges
+        if newX <= 0 or newX >= 1 then dx = -dx end
+        if newY <= 0 or newY >= 1 then dy = -dy end
+
+        textLabel.Position = UDim2.new(math.clamp(newX,0,1), 0, math.clamp(newY,0,1), 0)
+    end)
+
+    -- Remove after 4 seconds
+    game:GetService("Debris"):AddItem(textLabel, 4)
+    delay(4, function()
+        connection:Disconnect()
+    end)
+end
+
+-- Continuous chaotic spawn
+while true do
+    for i = 1, 20 do -- spawn 20 words at a time
+        spawnBouncingWord()
+    end
+    wait(0.05) -- spawn speed, smaller = more chaos
+end
